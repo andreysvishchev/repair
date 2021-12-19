@@ -1,0 +1,222 @@
+.benefits {
+  margin-bottom: 100px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 120%;
+    color: #333333;
+    margin-bottom: -30px;
+    transform: translateX(90px);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__info {
+    margin-top: 80px;
+    background-color: #fff;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 35px 40px 40px 40px;
+    max-width: 590px;
+    transform: translateX(90px);
+  }
+
+  &__img {
+    min-width: 550px;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+    padding-left: 100px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 35px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &:nth-child(1) {
+      &::before {
+        width: 62px;
+        height: 64px;
+        background-image: url('../img/ben-1.svg');
+      }
+
+    }
+
+    &:nth-child(2) {
+      &::before {
+        width: 64px;
+        height: 64px;
+        background-image: url('../img/ben-2.svg');
+      }
+
+    }
+
+    &:nth-child(3) {
+      &::before {
+        width: 64px;
+        height: 64px;
+        background-image: url('../img/ben-3.svg');
+      }
+
+    }
+
+    &:nth-child(4) {
+      &::before {
+        width: 51px;
+        height: 64px;
+        background-image: url('../img/ben-4.svg');
+      }
+
+    }
+  }
+
+  &__subject {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 120%;
+    color: #333333;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 160%;
+    color: #4F4F4F;
+  }
+
+  &__link {
+    padding: 11px 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: #333333;
+    background: #F2C94C;
+    border-radius: 6px;
+    text-align: center;
+    max-width: 250px;
+    width: 100%;
+    display: block;
+    margin: 50px auto 0;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .benefits {
+
+    &__title {
+      margin-bottom: 30px;
+      transform: translateX(0px);
+      text-align: center;
+    }
+
+    &__inner {
+      position: relative;
+      height: 780px;
+    }
+
+    &__link {
+      display: none;
+
+      &--mobile {
+        display: block;
+        margin-top: 40px;
+      }
+    }
+
+    &__item {
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+      width: 380px;
+      height: 780px;
+    }
+
+    &__info {
+      max-width: 490px;
+      padding: 30px;
+      margin-top: 40px;
+      transform: translateX(50px);
+      position: absolute;
+      z-index: 5;
+    }
+  }
+}
+
+
+@media (max-width: 900px) {
+  .benefits {
+    &__img {
+      transform: translateX(100px);
+    }
+
+    &__info {
+      transform: translateX(10px);
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .benefits {
+    margin-bottom: 50px;
+
+    &__container {
+      padding: 0;
+    }
+
+    &__inner {
+      height: max-content;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__info {
+      position: relative;
+      max-width: 100%;
+      transform: translateX(0);
+      margin: 0;
+    }
+
+    &__item {
+      padding: 0;
+      padding-top: 100px;
+      font-size: 14px;
+      text-align: center;
+
+      &:before {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+    }
+    &__subject {
+      font-size: 19px;
+      margin-bottom: 10px;
+      display: block;
+    }
+  }
+}
